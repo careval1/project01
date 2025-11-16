@@ -59,10 +59,15 @@ section {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   max-width: 320px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1rem;
 }
 
 .candidate img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
@@ -93,13 +98,18 @@ footer {
   color: #333;
 }
 
-/* Optional: Responsive layout for candidates */
+/* Responsive layout for candidates */
 @media (min-width: 768px) {
-  /* Arrange candidate cards in a row for larger screens */
   #district-attorney .candidate,
   #city-controller .candidate {
     display: inline-block;
     vertical-align: top;
-    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .candidate {
+    display: block;
+    margin-right: 0;
   }
 }
