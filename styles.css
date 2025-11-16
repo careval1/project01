@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset and basic styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header styles */
 header {
   background: #333;
   color: #fff;
@@ -15,7 +15,7 @@ header {
   text-align: center;
 }
 
-/* Navigation */
+/* Navigation bar */
 nav {
   background: #444;
   padding: 0.8rem 1rem;
@@ -40,7 +40,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main layout */
+/* Main content layout */
 main {
   padding: 2rem;
   max-width: 1000px;
@@ -67,16 +67,20 @@ section {
   margin-bottom: 0.5rem;
 }
 
+/* Party colors */
 .party.democrat {
   color: #0066ff;
+  font-weight: bold;
 }
 
 .party.republican {
   color: #ff0000;
+  font-weight: bold;
 }
 
 .party.other {
   color: #ffcc00;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -85,4 +89,17 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Optional: Responsive layout for candidates */
+@media (min-width: 768px) {
+  /* Arrange candidate cards in a row for larger screens */
+  #district-attorney .candidate,
+  #city-controller .candidate {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1rem;
+  }
 }
